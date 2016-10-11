@@ -116,6 +116,7 @@
 
             </plugin>
             -->
+            <!--
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>rpm-maven-plugin</artifactId>
@@ -269,16 +270,17 @@
                         </mapping>
 
                     </mappings>
-
+                    -->
                     <!--
                     <preinstallScriptlet>
                         <script>useradd statspoller</script>
                     </preinstallScriptlet>
                     -->
 
-                    <postinstallScriptlet>
+
+                  <!--  <postinstallScriptlet>
                         <script>
-                            /sbin/chkconfig --add statspoller
+                            /sbin/chkconfig add statspoller
                             systemctl daemon-reload > /dev/null 2>&amp;1
                             printf "Post-installation notice: Please remember to start/restart StatsPoller\n"
                         </script>
@@ -298,7 +300,7 @@
 
                 </configuration>
 
-            </plugin>
+            </plugin> -->
 
             <plugin>
                 <groupId>com.spotify</groupId>

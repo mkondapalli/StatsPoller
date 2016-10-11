@@ -16,6 +16,7 @@ RUN chown -R statsp:statsp /statsp
 
 USER statsp
 
-# HEALTHCHECK CMD -e /statsp/logs/statpoller.log
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD ps -ef | grep StatsPoller.jar || exit 1
 
 CMD ["java","-jar", "StatsPoller.jar"]
