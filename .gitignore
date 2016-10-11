@@ -9,3 +9,11 @@
 !/logs/ignore.me
 /output/*
 !/output/ignore.me
+.idea/compiler.xml
+.idea/copyright/
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+junkimages.txt
+src/main/main.iml
+src/test/test.iml

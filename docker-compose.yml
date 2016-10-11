@@ -1,0 +1,13 @@
+version: "2"
+services:
+  statsp:
+    build:
+      context: .
+    depends_on:
+    - httpd
+    volumes:
+    - ./conf:/statsd/conf
+  httpd:
+    image: httpd
+    ports:
+    - 8080:80
