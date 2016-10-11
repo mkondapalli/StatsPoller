@@ -17,3 +17,5 @@
 junkimages.txt
 src/main/main.iml
 src/test/test.iml
+StatsPoller.iml
+.gitignore
