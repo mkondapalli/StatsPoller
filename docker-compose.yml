@@ -3,10 +3,9 @@ services:
   statsp:
     build:
       context: .
+    image: statspoller
     depends_on:
     - httpd
-    volumes:
-    - ./conf:/statsd/conf
   httpd:
     image: httpd
     ports:

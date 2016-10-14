@@ -1,10 +1,10 @@
-FROM openjdk:8-jre
+FROM openjdk:8-jre-alpine
 
 USER root
 
 WORKDIR /statsp
 
-RUN groupadd -r statsp && useradd -r -g statsp statsp
+RUN addgroup statsp && adduser -D -G statsp statsp
 
 RUN mkdir /statsp/output /statsp/logs /statsp/lib
 
@@ -19,4 +19,4 @@ USER statsp
 HEALTHCHECK --interval=5m --timeout=3s \
   CMD ps -ef | grep StatsPoller.jar || exit 1
 
-CMD ["java","-jar", "StatsPoller.jar"]
+ENTRYPOINT ["java","-jar", "StatsPoller.jar"]
